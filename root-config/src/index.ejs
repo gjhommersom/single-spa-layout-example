@@ -34,7 +34,9 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://unpkg.com/react@16.12.0/umd/react.production.min.js",
+        "react-dom": "https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -47,7 +49,7 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@gh/react-app": "http://localhost:9901/gh-react-app.js",
         "@gh/root-config": "http://localhost:9900/gh-root-config.js"
       }
     }
@@ -71,14 +73,9 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <!-- <nav>
-        <application name="@<%- orgName %>/navbar"></application>
-      </nav> -->
-      <main>
-        <route default>
-          <application name="@single-spa/welcome"></application>
-        </route>
-      </main>
+      <route default>
+        <application name="@gh/react-app"></application>
+      </route>
     </single-spa-router>
   </template>
 </head>
