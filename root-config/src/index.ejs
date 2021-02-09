@@ -73,9 +73,19 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <route default>
-        <application name="@gh/react-app"></application>
-      </route>
+
+      <div>
+        <route path="/operator/myapp">
+          <application name="@gh/react-app"></application>
+        </route>
+      </div>
+
+      <div>
+        <route path="/configurator/myapp">
+          <application name="@gh/react-app"></application>
+        </route>
+      </div>
+
     </single-spa-router>
   </template>
 </head>
